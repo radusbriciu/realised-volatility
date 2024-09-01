@@ -1,0 +1,105 @@
+dataForGARCH.csv loaded from C:\Users\Reginald\Desktop\Q5\dataForGARCH.csv
+
+
+Ox 9.10 (Windows_64/Parallel) (C) J.A. Doornik, 1994-2023 (oxlang.dev)
+Copyright for this package: S. Laurent, 2000-2021.
+G@RCH package version 9.0, object created on 28-03-2024
+Copyright for this package: S. Laurent, 2000-2021.
+
+Starting estimation process...
+
+
+ ******************************
+ ** G@RCH(1) SPECIFICATIONS **
+ ******************************
+The dataset is: C:\Users\Reginald\Desktop\Q5\dataForGARCH.csv
+The estimation sample is:  2006-01-03 - 2008-12-31
+The dependent variable is: DLclose
+Mean Equation:  ARMA (0, 0) model.
+No regressor in the conditional mean
+Variance Equation:  GARCH (1, 1) model.
+No regressor in the conditional variance
+Normal distribution.
+
+Strong convergence using numerical derivatives
+Log-likelihood = 1870.36
+Please wait : Computing the Std Errors ...
+
+ Robust Standard Errors (Sandwich formula)
+                  Coefficient  Std.Error  t-value  t-prob
+Cst(M)               0.000821 0.00052731    1.557  0.1200
+Cst(V) x 10^4        0.067645   0.034520    1.960  0.0504
+ARCH(Alpha1)         0.173502   0.041712    4.160  0.0000
+GARCH(Beta1)         0.832814   0.036735    22.67  0.0000
+
+No. Observations :       755  No. Parameters  :         4
+Mean (Y)         :  -0.00020  Variance (Y)    :   0.00102
+Skewness (Y)     :   0.17230  Kurtosis (Y)    :  10.84318
+Log Likelihood   :  1870.356  Alpha[1]+Beta[1]:   1.00632
+
+The sample mean of squared residuals was used to start recursion.
+The positivity constraint for the GARCH (1,1) is observed.
+This constraint is alpha[L]/[1 - beta(L)] >= 0.
+The unconditional variance does not exist and/or is not positive.
+The conditions are alpha[0] > 0, alpha[L] + beta[L] < 1 and alpha[i] + beta[i] >= 0.
+  => See Doornik & Ooms (2001) for more details.
+The condition for existence of the fourth moment of the GARCH is not observed.
+The constraint equals 1.07288 and should be < 1.
+  => See Ling & McAleer (2001) for details.
+
+Estimated Parameters Vector : 
+ 0.000821; 0.067645; 0.173502; 0.832819
+Elapsed Time : 0.015 seconds (or 0.00025 minutes).
+
+
+  ***********
+ ** TESTS **
+***********
+
+TESTS :
+---------
+Information Criteria (to be minimized)
+Akaike         -4.943990  Shibata        -4.944046
+Schwarz         -4.919478  Hannan-Quinn    -4.934548
+---------------
+
+Normality Test
+
+                   Statistic       t-Test      P-Value
+Skewness             0.15513       1.7436     0.081227
+Excess Kurtosis       1.9466       10.954   6.3687e-28
+Jarque-Bera           122.23         .NaN   2.8749e-27
+---------------
+
+Q-Statistics on Standardized Residuals
+  Q(  5) =  6.53864   [0.2572736]  
+  Q( 10) =  14.4739   [0.1524534]  
+  Q( 20) =  19.9099   [0.4635757]  
+  Q( 50) =  48.9643   [0.5149355]  
+H0 : No serial correlation ==> Accept H0 when prob. is High [Q < Chisq(lag)]
+---------------
+
+Q-Statistics on Squared Standardized Residuals
+  --> P-values adjusted by 2 degree(s) of freedom 
+  Q(  5) =  1.37499   [0.7114082]  
+  Q( 10) =  2.58037   [0.9578776]  
+  Q( 20) =  9.86379   [0.9362616]  
+  Q( 50) =  43.0707   [0.6746233]  
+H0 : No serial correlation ==> Accept H0 when prob. is High [Q < Chisq(lag)]
+---------------
+
+Diagnostic test based on the news impact curve (EGARCH vs. GARCH)
+                                     Test  P-value
+Sign Bias t-Test                  0.22549  0.82160
+Negative Size Bias t-Test         0.66076  0.50877
+Positive Size Bias t-Test         0.38061  0.70349
+Joint Test for the Three Effects  1.28668  0.73230
+
+---------------
+ARCH 1-2 test:    F(2,748)  =  0.58516 [0.5573]  
+ARCH 1-5 test:    F(5,742)  =  0.26853 [0.9303]  
+ARCH 1-10 test:   F(10,732) =  0.25772 [0.9896]  
+---------------
+CondV [   1 -  755] saved to dataForGARCH.csv
+dataForGARCH.csv saved to C:\Users\Reginald\Desktop\Q5\dataForGARCH.csv
+
